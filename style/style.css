@@ -238,13 +238,27 @@ h1,h2,h3,p{
   }
 
   @media(max-width:420px){
+    body,html{
+     position: relative;
+    }
+
+    .description__action{
+      margin-bottom: 92px;
+    }
+
+    .header__top{
+      margin-left: 16px;
+    }
+    .header__container{
+      padding-top: 36px;
+    }
     .powerful-insights__container {
-      margin-top: 400px;
+      margin-top: 340px;
     }
     .powerful-insights__container img{
-      margin-top: 150px;
+      margin-top: 110px;
       min-width: 482px;
-      min-height: 293px;
+      min-height: 239px;
       position: absolute;
       top: 0;
       left: 0;

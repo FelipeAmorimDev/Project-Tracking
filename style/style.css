@@ -91,7 +91,7 @@ h1,h2,h3,p{
   height: 6px;
   background-color: var(--cor-3);
   top: 50%;
-  right: 100px;
+  right: 74px;
   transform: translateY(-50%);
   border-radius: 50%;
   opacity: .15;

@@ -12,7 +12,7 @@
   letter-spacing: 1.07px;
 }
 
-.font-1-m{
+.font-1-m,.font-1-m-b{
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 15px;
   font-weight: 400;

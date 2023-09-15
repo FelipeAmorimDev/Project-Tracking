@@ -1,0 +1,149 @@
+.header__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 64px 32px 0px;
+
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  gap: 42px;
+  position: relative;
+}
+
+.nav__link {
+  line-height: 1px;
+}
+
+.nav__link a {
+  border-bottom: solid 1px transparent;
+  padding: 8px 0px;
+  transition: .3s;
+}
+
+.nav__link a:hover {
+  border-color: var(--cor-3);
+  transform: translateY(-10px);
+}
+
+.nav__link:nth-child(even) a:hover {
+  border-color: var(--cor-3);
+  transform: translateY(10px);
+}
+
+
+.nav__link:last-child {
+  margin-left: 51px;
+  position: relative;
+  opacity: .50;
+}
+
+.nav__list::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--cor-3);
+  top: 50%;
+  right: 83px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  opacity: .15;
+}
+
+.sobreposicao__top {
+  position: absolute;
+  width: 50%;
+  height: 427px;
+  right: 0;
+  background-color: #EDF2F6;
+  border-bottom-left-radius: 60px;
+}
+
+.menu-hb {
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+
+}
+
+@media(max-width:600px) {
+  .menu-hb {
+    display: block;
+  }
+
+  .header__nav {
+    position: absolute;
+    width: calc(100vw - 64px);
+    top: 130px;
+    left: 32px;
+    transform: translateX(-200px);
+    display: flex;
+    opacity: 0;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .header__nav.active {
+    transition: .3s;
+    opacity: 1;
+    transform: initial;
+  }
+
+  .nav__list {
+    padding: 24px;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .nav__link:last-child {
+    margin-left: 0px;
+    margin-top: 24px;
+  }
+
+  .header__nav::before {
+    content: "";
+    position: absolute;
+    z-index: 7;
+    display: block;
+    width: calc(100% - 48px);
+    left: 24px;
+    top: 150px;
+    height: 2px;
+    background-color: var(--cor-3);
+    opacity: .15;
+  }
+
+  .nav__list::before {
+    display: none;
+  }
+
+  .nav__link a:hover {
+    transform: initial;
+  }
+
+  .nav__link:nth-child(even) a:hover {
+    transform: initial;
+  }
+}
+
+@media(max-width:420px) {
+  .header__top {
+    margin-left: 16px;
+  }
+
+  .header__container {
+    padding-top: 36px;
+  }
+}

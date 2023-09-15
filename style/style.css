@@ -237,7 +237,7 @@ h1,h2,h3,p{
 
   }
 
-  @media(max-width:400px){
+  @media(max-width:420px){
     .powerful-insights__container {
       margin-top: 400px;
     }
